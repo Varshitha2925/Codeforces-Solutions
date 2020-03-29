@@ -1,12 +1,15 @@
-def sortString(s): 
-    return ''.join(sorted(s)) 
-gn = input()
-rn = input()
-lf = input()
-gr = gn+rn
-gr = sortString(gr)
-lf = sortString(lf)
-if gr == lf:
-    print("YES")
+guest = str(input())
+host = str(input())
+letters = str(input())
+total = guest + host
+count = 0
+if len(total) == len(letters):
+  for i in total:
+    if letters.count(i) < total.count(i):
+      count += 1
 else:
-    print("NO")
+  count += 1
+if count == 0:
+  print("YES")
+else:
+  print("NO") 
